@@ -13,7 +13,7 @@ endif(WIN32)
 
 libwebrtc_command(
     NAME webrtc-ios-fetch
-    COMMAND ${FETCH_EXECUTABLE} --nohooks webrtc-ios
+    COMMAND ${FETCH_EXECUTABLE} --nohooks webrtc_ios
     WORKING_DIRECTORY "${CMAKE_BINARY_DIR}"
     COMMENT "Fetching WebRTC iOS"
 )
