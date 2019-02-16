@@ -45,11 +45,11 @@ if ("${WEBRTC_ROOT_PATH}" STREQUAL "" )
       webrtc-ios-src
 
       DEPENDS ${_NEXT_DEPENDS}
-      SOURCE_DIR ${CMAKE_SOURCE_DIR}/webrtc-ios
-      PREFIX ${CMAKE_BINARY_DIR}/webrtc-ios
-      BINARY_DIR ${CMAKE_BINARY_DIR}/webrtc-ios/build
-      STAMP_DIR ${CMAKE_BINARY_DIR}/webrtc-ios/stamp
-      TMP_DIR ${CMAKE_BINARY_DIR}/webrtc-ios/tmp
+      SOURCE_DIR ${CMAKE_SOURCE_DIR}/webrtc
+      PREFIX ${CMAKE_BINARY_DIR}/webrtc
+      BINARY_DIR ${CMAKE_BINARY_DIR}/webrtc/build
+      STAMP_DIR ${CMAKE_BINARY_DIR}/webrtc/stamp
+      TMP_DIR ${CMAKE_BINARY_DIR}/webrtc/tmp
       
       CMAKE_ARGS
       ${_WEBRTC_CMAKE_ARGS}
@@ -57,7 +57,7 @@ if ("${WEBRTC_ROOT_PATH}" STREQUAL "" )
       ""
   )
   set(_NEXT_DEPENDS webrtc-ios-src)
-  set(WEBRTC_ROOT_PATH ${CMAKE_BINARY_DIR}/webrtc-ios/build/src)
+  set(WEBRTC_ROOT_PATH ${CMAKE_BINARY_DIR}/webrtc/build/src)
 else()
   message(STATUS ${WEBRTC_ROOT_PATH})
 endif()
